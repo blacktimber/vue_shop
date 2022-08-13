@@ -1,6 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import login from '../components/login.vue'
 import home from '../components/home.vue'
+import welcome from '../components/welcome.vue'
+import users from '../components/user/users.vue'
+import roles from '../components/roles/roles.vue'
+import rights from '../components/roles/rights.vue'
+import goods from '../components/goods/goods.vue'
+import params from '../components/goods/params.vue'
+import categories from '../components/goods/categories.vue'
+import orders from '../components/orders/orders.vue'
+import reports from '../components/reports/reports.vue'
 const routes = [
   {
     path: '/',
@@ -12,7 +21,46 @@ const routes = [
   },
   {
     path: '/home',
-    component: home
+    component: home,
+    redirect:'/welcome',
+    children:[
+      {
+        path: '/welcome',
+        component: welcome
+      },
+      {
+        path: '/users',
+        component: users
+      },
+      {
+        path: '/roles',
+        component: roles
+      },
+      {
+        path: '/rights',
+        component: rights
+      },
+      {
+        path: '/goods',
+        component: goods
+      },
+      {
+        path: '/params',
+        component: params
+      },
+      {
+        path: '/categories',
+        component: categories
+      },
+      {
+        path: '/orders',
+        component: orders
+      },
+      {
+        path: '/reports',
+        component: reports
+      }
+   ]
   }
 ]
 
