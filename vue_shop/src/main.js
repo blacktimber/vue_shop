@@ -7,7 +7,9 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import 'element-plus/dist/index.css'
 import './assets/css/global.css'
 import './assets/fonts/iconfont.css'
-
+import moment from 'moment'
+import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
 
 const app=createApp(App)
 //配置请求根路径
@@ -22,3 +24,10 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
   }
 app.use(router).use(ElementPlus).mount('#app')
+app.component('QuillEditor', QuillEditor)
+
+
+
+
+
+
