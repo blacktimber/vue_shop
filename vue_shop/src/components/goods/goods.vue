@@ -90,7 +90,7 @@
     <!-- 编辑对话框 -->
     <el-dialog
       v-model="editDialogVisible"
-      :title="修改商品信息"
+      title="修改商品信息"
       width="50%"
       @close="editDialogClosed"
     >
