@@ -3,8 +3,8 @@
     <!-- 导航面包屑 -->
     <el-breadcrumb>
       <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>商品管理</el-breadcrumb-item>
-      <el-breadcrumb-item>商品列表</el-breadcrumb-item>
+      <el-breadcrumb-item>订单管理</el-breadcrumb-item>
+      <el-breadcrumb-item>订单列表</el-breadcrumb-item>
     </el-breadcrumb>
     <!-- 卡片视图区 -->
     <el-card>
@@ -62,7 +62,7 @@
           width="200px"
         ></el-table-column>
         <el-table-column label="操作" width="120px">
-          <template v-slot="scope">
+          <template >
           <!-- 修改地址 -->
             <el-button type="primary" size="small"  @click="editOrder">
               <el-icon><Edit /></el-icon>
